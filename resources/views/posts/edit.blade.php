@@ -11,6 +11,7 @@
            @csrf
            @method('PUT')
            <div class='content_title'>
+
                <h2>Title</h2>
                <input type='text' name='post[title]' value="{{ $post->title }}">
                </div>
