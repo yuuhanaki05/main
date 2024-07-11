@@ -27,7 +27,7 @@ class Post extends Model
         return view('posts.show')->with(['post'=> $post]);
     }
     
-    public function category(){
+    public function category() {
         return $this->belongsTo(Category::class);
     }
 }
