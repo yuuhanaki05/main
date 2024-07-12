@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Blog Name</h1>
+        {{ Auth::user()->name }}
         <div class='posts'>
           <a href='/posts/create'>create</a>
             @foreach($posts as $post)
@@ -41,6 +42,15 @@
                }
            }
         </script>
+        <div>
+            @foreach($questions as $question)
+                <div>
+                    <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                        {{ $question['title'] }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </body>
 </html>
 
